@@ -12,6 +12,7 @@
  * questions, and fix your mistakes. It's the only way to get good at programming.
  */
 
+import java.text.NumberFormat;
 public class ProblemSet1 {
 
     public static void main(String[] args) {
@@ -22,6 +23,16 @@ public class ProblemSet1 {
          * What is the area (in square millimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
+
+
+
+         //Exercise 1 is not done yet, need to format correctly
+
+
+
+
+
+
         double sheetLength = 11;
         double sheetWidth = 8.5;
         double conversionFactor = 25.4;
@@ -30,8 +41,12 @@ public class ProblemSet1 {
         sheetLength *= conversionFactor;
         sheetWidth *= conversionFactor;
         double area = sheetWidth * sheetLength;
-        area = Math.round(area,2);
+        area *=100;
+        area = Math.round(area);
+        area /= 100;
         System.out.println(area);
+        //String areaFormatted = String.format("%,d", area);
+        //System.out.println(areaFormatted);
 
         /*
          * Exercise 2.
