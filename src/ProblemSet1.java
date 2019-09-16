@@ -13,10 +13,6 @@
  *
  * @author Joseph Wang
  */
-
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
-
 public class ProblemSet1 {
 
     public static void main(String[] args) {
@@ -37,20 +33,15 @@ public class ProblemSet1 {
 
 
 
-        double sheetLength = 11;
-        double sheetWidth = 8.5;
-        double conversionFactorMillimeters = 25.4;
+        final double sheetLength = 11;
+        final double sheetWidth = 8.5;
+        final double conversionFactorMillimeters = 25.4;
 
         //converts sheetWidth and sheetLengthform inches to millimeters
-        sheetLength *= conversionFactorMillimeters;
-        sheetWidth *= conversionFactorMillimeters;
-        double area = sheetWidth * sheetLength;
-        area *= 100;
-        area = Math.round(area);
-        area /= 100;
-        NumberFormat myFormat = NumberFormat.getInstance();
-        myFormat.setGroupingUsed(true);
-        System.out.println("\n" + myFormat.format(area) + " squrare millimeters. \n");
+        double sheetLengthMillimeters = sheetLength * conversionFactorMillimeters;
+        double sheetWidthMillimeters = sheetWidth * conversionFactorMillimeters;
+        double area = sheetWidthMillimeters * sheetLengthMillimeters;
+        System.out.printf("\n%,.2f" + " square millimeters. \n", area);
 
         /*
          * Exercise 2.
@@ -58,17 +49,12 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         double conversionFactorCentimeters = 2.54;
-         sheetLength = 11;
-         sheetWidth = 8.5;
-         sheetLength *= conversionFactorCentimeters;
-         sheetWidth *= conversionFactorCentimeters;
+         final double conversionFactorCentimeters = 2.54;
+         double sheetLengthCentimeters = sheetLength * conversionFactorCentimeters;
+         double sheetWidthCentimeters = sheetWidth * conversionFactorCentimeters;
          double sheetPerimeter;
-         sheetPerimeter = (2 * sheetLength) + (2 * sheetWidth);
-         sheetPerimeter *= 100;
-         sheetPerimeter = Math.round(sheetPerimeter);
-         sheetPerimeter /= 100;
-         System.out.println("\n" + sheetPerimeter + " centimeters. \n");
+         sheetPerimeter = (2 * sheetLengthCentimeters) + (2 * sheetWidthCentimeters);
+         System.out.printf("\n%.2f" + " centimeters. \n", sheetPerimeter);
 
         /*
          * Exercise 3.
@@ -77,8 +63,9 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         sheetLength = 11;
-         sheetWidth = 8.5;
+         double sheetDiagonal;
+         sheetDiagonal = Math.sqrt( ( sheetLength * sheetLength ) + ( sheetWidth * sheetWidth ) );
+         System.out.printf("\n%.2f" + " inches \n", sheetDiagonal);;
 
         /*
          * Exercise 4.
