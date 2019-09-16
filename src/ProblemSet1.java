@@ -44,7 +44,7 @@ public class ProblemSet1 {
         area *=100;
         area = Math.round(area);
         area /= 100;
-        System.out.println(area);
+        System.out.println("\n" + area + "\n");
         //String areaFormatted = String.format("%,d", area);
         //System.out.println(areaFormatted);
 
