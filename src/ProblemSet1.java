@@ -10,9 +10,13 @@
  *
  * Work through these exercises on your own. Experiment, make mistakes, ask
  * questions, and fix your mistakes. It's the only way to get good at programming.
+ *
+ * @author Joseph Wang
  */
 
+import java.text.DecimalFormat;
 import java.text.NumberFormat;
+
 public class ProblemSet1 {
 
     public static void main(String[] args) {
@@ -44,9 +48,9 @@ public class ProblemSet1 {
         area *=100;
         area = Math.round(area);
         area /= 100;
-        System.out.println("\n" + area + "\n");
-        //String areaFormatted = String.format("%,d", area);
-        //System.out.println(areaFormatted);
+        NumberFormat myFormat = NumberFormat.getInstance();
+        myFormat.setGroupingUsed(true);
+        System.out.println("\n" + myFormat.format(area) + "\n");
 
         /*
          * Exercise 2.
