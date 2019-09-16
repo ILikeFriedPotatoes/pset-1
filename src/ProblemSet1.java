@@ -39,18 +39,18 @@ public class ProblemSet1 {
 
         double sheetLength = 11;
         double sheetWidth = 8.5;
-        double conversionFactor = 25.4;
+        double conversionFactorMillimeters = 25.4;
 
         //converts sheetWidth and sheetLengthform inches to millimeters
-        sheetLength *= conversionFactor;
-        sheetWidth *= conversionFactor;
+        sheetLength *= conversionFactorMillimeters;
+        sheetWidth *= conversionFactorMillimeters;
         double area = sheetWidth * sheetLength;
-        area *=100;
+        area *= 100;
         area = Math.round(area);
         area /= 100;
         NumberFormat myFormat = NumberFormat.getInstance();
         myFormat.setGroupingUsed(true);
-        System.out.println("\n" + myFormat.format(area) + "\n");
+        System.out.println("\n" + myFormat.format(area) + " squrare millimeters. \n");
 
         /*
          * Exercise 2.
@@ -58,7 +58,17 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-
+         double conversionFactorCentimeters = 2.54;
+         sheetLength = 11;
+         sheetWidth = 8.5;
+         sheetLength *= conversionFactorCentimeters;
+         sheetWidth *= conversionFactorCentimeters;
+         double sheetPerimeter;
+         sheetPerimeter = (2 * sheetLength) + (2 * sheetWidth);
+         sheetPerimeter *= 100;
+         sheetPerimeter = Math.round(sheetPerimeter);
+         sheetPerimeter /= 100;
+         System.out.println("\n" + sheetPerimeter + " centimeters. \n");
 
         /*
          * Exercise 3.
@@ -67,7 +77,8 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-
+         sheetLength = 11;
+         sheetWidth = 8.5;
 
         /*
          * Exercise 4.
