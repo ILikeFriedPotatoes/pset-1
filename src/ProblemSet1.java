@@ -38,9 +38,9 @@ public class ProblemSet1 {
         final double conversionFactorMillimeters = 25.4;
 
         //converts sheetWidth and sheetLengthform inches to millimeters
-        double sheetLengthMillimeters = sheetLength * conversionFactorMillimeters;
-        double sheetWidthMillimeters = sheetWidth * conversionFactorMillimeters;
-        double area = sheetWidthMillimeters * sheetLengthMillimeters;
+        final double sheetLengthMillimeters = sheetLength * conversionFactorMillimeters;
+        final double sheetWidthMillimeters = sheetWidth * conversionFactorMillimeters;
+        final double area = sheetWidthMillimeters * sheetLengthMillimeters;
         System.out.printf("\n%,.2f" + " square millimeters. \n", area);
 
         /*
@@ -50,10 +50,9 @@ public class ProblemSet1 {
          */
 
          final double conversionFactorCentimeters = 2.54;
-         double sheetLengthCentimeters = sheetLength * conversionFactorCentimeters;
-         double sheetWidthCentimeters = sheetWidth * conversionFactorCentimeters;
-         double sheetPerimeter;
-         sheetPerimeter = (2 * sheetLengthCentimeters) + (2 * sheetWidthCentimeters);
+         final double sheetLengthCentimeters = sheetLength * conversionFactorCentimeters;
+         final double sheetWidthCentimeters = sheetWidth * conversionFactorCentimeters;
+         final double sheetPerimeter = (2 * sheetLengthCentimeters) + (2 * sheetWidthCentimeters);
          System.out.printf("\n%.2f" + " centimeters. \n", sheetPerimeter);
 
         /*
@@ -63,8 +62,7 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         double sheetDiagonal;
-         sheetDiagonal = Math.sqrt( ( sheetLength * sheetLength ) + ( sheetWidth * sheetWidth ) );
+         final double sheetDiagonal = Math.sqrt( ( sheetLength * sheetLength ) + ( sheetWidth * sheetWidth ) );
          System.out.printf("\n%.2f" + " inches \n", sheetDiagonal);;
 
         /*
