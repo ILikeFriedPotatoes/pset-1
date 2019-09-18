@@ -97,7 +97,17 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
-         final double WAGE_PER_HOUR = 12.50;
+         double HOURLY_WAGE = 12.50;
+         double hoursWorkedOnMonday = 7.5;
+         double hoursWorkedOnTuesday = 8;
+         double hoursWorkedOnWednesday = 10.5;
+         double hoursWorkedOnThursday = 9.5;
+         double hoursWorkedOnFriday = 6;
+         double hoursWorkedOnSaturday = 11.5;
+         double hoursWorkedOnSunday = 0;
+         double totalHoursWorked = hoursWorkedOnSunday + hoursWorkedOnMonday + hoursWorkedOnTuesday + hoursWorkedOnWednesday + hoursWorkedOnThursday + hoursWorkedOnFriday + hoursWorkedOnSaturday;
+         double moneyEarned = totalHoursWorked * HOURLY_WAGE;
+         System.out.printf("\n$%,.2f.\n", moneyEarned);
 
         /*
          * Exercise 6.
@@ -105,7 +115,14 @@ public class ProblemSet1 {
          * What is my take-home pay each check?
          */
 
-
+         final double MONTHLY_SALARY = 117000 / 24;
+         final double FEDERAL_INCOME_TAX = 0.24;
+         final double STATE_INCOME_TAX = 0.0637;
+         final double _401K_CONTRIBUTION =  0.07;
+         double finalSalary = MONTHLY_SALARY * (1 - _401K_CONTRIBUTION);
+         finalSalary *= (1 - FEDERAL_INCOME_TAX);
+         finalSalary *= (1 - STATE_INCOME_TAX);
+         System.out.printf("\n$%,.2f.\n", finalSalary);
 
         /*
          * Exercise 7.
@@ -114,7 +131,13 @@ public class ProblemSet1 {
          * people will be on the last bus?
          */
 
-
+         final double NUMBER_OF_STUDENTS = 273;
+         final double NUMBER_OF_TEACHERS = 28;
+         final double BUS_CAPACITY = 54;
+         double busesNeeded = Math.ceil( ( NUMBER_OF_STUDENTS + NUMBER_OF_TEACHERS ) / BUS_CAPACITY);
+         double passengersOnLastBus = ( NUMBER_OF_STUDENTS + NUMBER_OF_TEACHERS ) % BUS_CAPACITY;
+         System.out.printf("\n%,.0f buses are needed, with ", busesNeeded);
+         System.out.printf("%,.0f passengers on the last bus.\n", passengersOnLastBus );
 
         /*
          * Exercise 8.
@@ -122,7 +145,13 @@ public class ProblemSet1 {
          * What is the surface area of a standard Cornhole board?
          */
 
-
+         final double LENGTH_OF_BOARD = 48;
+         final double WIDTH_OF_BOARD = 24;
+         final double DIAMETER_OF_BOARD = 6;
+         double planarSurfaceArea = LENGTH_OF_BOARD * WIDTH_OF_BOARD;
+         double holeSurfaceArea = Math.PI * Math.pow((DIAMETER_OF_BOARD)/2, 2);
+         double surfaceArea = planarSurfaceArea -holeSurfaceArea;
+         System.out.printf("\n%,.2f square inches.\n", surfaceArea);
 
         /*
          * Exercise 9.
