@@ -33,15 +33,15 @@ public class ProblemSet1 {
 
 
 
-        final double sheetLength = 11;
-        final double sheetWidth = 8.5;
-        final double conversionFactorMillimeters = 25.4;
+        final double SHEET_LENGTH = 11;
+        final double SHEET_WIDTH = 8.5;
+        final double CONVERSION_FACTOR_MILLIMETERS = 25.4;
 
-        //converts sheetWidth and sheetLengthform inches to millimeters
-        final double sheetLengthMillimeters = sheetLength * conversionFactorMillimeters;
-        final double sheetWidthMillimeters = sheetWidth * conversionFactorMillimeters;
-        final double area = sheetWidthMillimeters * sheetLengthMillimeters;
-        System.out.printf("\n%,.2f" + " square millimeters. \n", area);
+        //converts SHEETWIDTH and SHEETLENGTHform inches to millimeters
+        final double SHEET_LENGTH_MILLIMETERS = SHEET_LENGTH * CONVERSION_FACTOR_MILLIMETERS;
+        final double SHEET_WIDTH_MILLIMETERS = SHEET_WIDTH * CONVERSION_FACTOR_MILLIMETERS;
+        final double AREA = SHEET_WIDTH_MILLIMETERS * SHEET_LENGTH_MILLIMETERS;
+        System.out.printf("\n%,.2f" + " square millimeters. \n", AREA);
 
         /*
          * Exercise 2.
@@ -49,11 +49,11 @@ public class ProblemSet1 {
          * What is the perimeter (in centimeters) of an 8.5-by-11-inch sheet of paper?
          */
 
-         final double conversionFactorCentimeters = 2.54;
-         final double sheetLengthCentimeters = sheetLength * conversionFactorCentimeters;
-         final double sheetWidthCentimeters = sheetWidth * conversionFactorCentimeters;
-         final double sheetPerimeter = (2 * sheetLengthCentimeters) + (2 * sheetWidthCentimeters);
-         System.out.printf("\n%.2f" + " centimeters. \n", sheetPerimeter);
+         final double CONVERSION_FACTOR_CENTIMETERS = 2.54;
+         final double SHEET_LENGTH_CENTIMETERS = SHEET_LENGTH * CONVERSION_FACTOR_CENTIMETERS;
+         final double SHEET_WIDTH_CENTIMETERS = SHEET_WIDTH * CONVERSION_FACTOR_CENTIMETERS;
+         final double SHEET_PERIMETER = (2 * SHEET_LENGTH_CENTIMETERS) + (2 * SHEET_WIDTH_CENTIMETERS);
+         System.out.printf("\n%.2f" + " centimeters. \n", SHEET_PERIMETER);
 
         /*
          * Exercise 3.
@@ -62,8 +62,8 @@ public class ProblemSet1 {
          * by-11-inch sheet of paper?
          */
 
-         final double sheetDiagonal = Math.sqrt( ( sheetLength * sheetLength ) + ( sheetWidth * sheetWidth ) );
-         System.out.printf("\n%.2f" + " inches \n", sheetDiagonal);;
+         double diagonalLength = Math.hypot(SHEET_LENGTH, SHEET_WIDTH);
+         System.out.printf("\n%.2f" + " inches \n", diagonalLength);;
 
         /*
          * Exercise 4.
@@ -81,8 +81,14 @@ public class ProblemSet1 {
         int test1 = 74;
         int test2 = 87;
         int test3 = 82;
-
-
+        final double HOMEWORK_GRADE_WEIGHT = 0.15;
+        final double QUIZ_GRADE_WEIGHT = 0.35;
+        final double TEST_GRADE_WEIGHT = 0.5;
+        double homeworkGradeTotal = ( homework1 + homework2 + homework3 ) * HOMEWORK_GRADE_WEIGHT / 3;
+        double quizGradeTotal = ( quiz1 + quiz2 + quiz3 ) * QUIZ_GRADE_WEIGHT / 3;
+        double testGradeTotal = ( test1 + test2 + test3 ) * TEST_GRADE_WEIGHT / 3;
+        double finalGradeTotal = homeworkGradeTotal + quizGradeTotal + testGradeTotal;
+        System.out.printf("\n%,.2f%%.\n", finalGradeTotal);
 
         /*
          * Exercise 5.
@@ -91,7 +97,7 @@ public class ProblemSet1 {
          * will I make this week?
          */
 
-
+         final double WAGE_PER_HOUR = 12.50;
 
         /*
          * Exercise 6.
