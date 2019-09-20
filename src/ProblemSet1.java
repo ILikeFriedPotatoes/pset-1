@@ -1,15 +1,7 @@
 /**
- * Problem Set 1.
- *
- * It's time to put your skills to the test. This problem set focuses on using
- * primitive data types, variables, and basic operators and functions.
- *
- * The specifications for each exercise are outlined below. Your output is
- * expected to meet requirements set forth in this section (as well as the
- * Deliverables section).
- *
- * Work through these exercises on your own. Experiment, make mistakes, ask
- * questions, and fix your mistakes. It's the only way to get good at programming.
+ * Copyright (c) 2019. Joseph Wang
+ * If you want to use the code, that's fine. Do not copy the information if you
+ * are using this for a school project.
  *
  * @author Joseph Wang
  */
@@ -105,7 +97,8 @@ public class ProblemSet1 {
          double hoursWorkedOnFriday = 6;
          double hoursWorkedOnSaturday = 11.5;
          double hoursWorkedOnSunday = 0;
-         double totalHoursWorked = hoursWorkedOnSunday + hoursWorkedOnMonday + hoursWorkedOnTuesday + hoursWorkedOnWednesday + hoursWorkedOnThursday + hoursWorkedOnFriday + hoursWorkedOnSaturday;
+         double totalHoursWorked = hoursWorkedOnSunday + hoursWorkedOnMonday + hoursWorkedOnTuesday +
+           hoursWorkedOnWednesday + hoursWorkedOnThursday + hoursWorkedOnFriday + hoursWorkedOnSaturday;
          double moneyEarned = totalHoursWorked * HOURLY_WAGE;
          System.out.printf("\n$%,.2f.\n", moneyEarned);
 
@@ -159,6 +152,15 @@ public class ProblemSet1 {
          * Are the years 2020, 2100, and 2400 leap years?
          */
 
+         int year = 2020;
+		 boolean isLeapYear = (year % 4 == 0) && (year % 100 != 0) ||  (year % 400 == 0);
+         System.out.printf("\n" + year + " is a leap year..." + isLeapYear + ".");
+		 year = 2100;
+		 isLeapYear = (year % 4 == 0) && (year % 100 != 0) ||  (year % 400 == 0);
+         System.out.printf("\n" + year + " is a leap year..." + isLeapYear + ".");
+		 year = 2400;
+		 isLeapYear = (year % 4 == 0) && (year % 100 != 0) ||  (year % 400 == 0);
+         System.out.printf("\n" + year + " is a leap year..." + isLeapYear + ".\n");
 
 
         /*
