@@ -153,15 +153,14 @@ public class ProblemSet1 {
          */
 
          int year = 2020;
-		 boolean isLeapYear = (year % 4 == 0) && (year % 100 != 0) ||  (year % 400 == 0);
+		 boolean isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) ||  (year % 400 == 0);
          System.out.printf("\n" + year + " is a leap year..." + isLeapYear + ".");
 		 year = 2100;
-		 isLeapYear = (year % 4 == 0) && (year % 100 != 0) ||  (year % 400 == 0);
+		 isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
          System.out.printf("\n" + year + " is a leap year..." + isLeapYear + ".");
 		 year = 2400;
-		 isLeapYear = (year % 4 == 0) && (year % 100 != 0) ||  (year % 400 == 0);
+		 isLeapYear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
          System.out.printf("\n" + year + " is a leap year..." + isLeapYear + ".\n");
-
 
         /*
          * Exercise 10.
@@ -169,7 +168,10 @@ public class ProblemSet1 {
          * What is the wind chill?
          */
 
-
+		 double temperature = 38;
+		 double windSpeed = 14;
+		 double windChill = 35.74 + (0.6215 * temperature) + (((0.4275 * temperature) - 35.75) * Math.pow(windSpeed, 0.16));
+		 System.out.printf("\n%,.1f degrees. \n", windChill);
 
     }
 }
